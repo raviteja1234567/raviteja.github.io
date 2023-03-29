@@ -93,6 +93,17 @@ $(window).on("load", function() {
     });
 });
 
+function sendEmail(){
+  Email.send({
+    SecureTocken : "97df70e8-c218-4779-aa7d-b37685c49dde",
+    To : 'raviteja5211.rt@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New person is contacting from My Portfolio",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
 
 // google maps
 function initMap() {
